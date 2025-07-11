@@ -1,0 +1,158 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    color: #4A148C; /* Purple */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #4A148C; /* Purple */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 2rem;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.navbar .hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #4A148C;
+}
+
+.portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    color: #4A148C;
+    margin-bottom: 2rem;
+}
+
+.skill-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #FF6F00; /* Orange */
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #4A148C;
+    margin-bottom: 1.5rem;
+}
+
+/* Mobile-first Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #4A148C;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+}
